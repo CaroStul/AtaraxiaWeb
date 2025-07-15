@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ataraxia Café - Café de Especialidad</title>
+    <meta name="description" content="Ataraxia Café - Descubre nuestro café de especialidad y vive una experiencia sensorial única">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    'sans': ['Montserrat', 'sans-serif'],
+                    'serif': ['Playfair Display', 'serif']
+                },
+                extend: {
+                    colors: {
+                        'ataraxia-brown': '#68442A',
+                        'ataraxia-beige': '#9E5911',
+                        'ataraxia-dark': '#CDA13F',
+                        'ataraxia-light': '#EAD3B9'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: url('https://img.cronista.com/files/image/306/306381/5ffe2dea7f977_950_534!.png?s=ebb07fe84437bc268ee8c00740e319c5&d=1748920967');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans bg-ataraxia-light text-ataraxia-dark">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-serif font-bold text-ataraxia-brown">Ataraxia Café</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="nav-link hover:text-ataraxia-brown">Inicio</a>
+                    <a href="#nosotros" class="nav-link hover:text-ataraxia-brown">Quiénes Somos</a>
+                    <a href="#productos" class="nav-link hover:text-ataraxia-brown">Productos</a>
+                    <a href="#contacto" class="nav-link hover:text-ataraxia-brown">Contacto</a>
+                </div>
+                <button class="md:hidden focus:outline-none" id="menu-btn">
+                    <i class="fas fa-bars text-2xl text-ataraxia-brown"></i>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden mt-4" id="mobile-menu">
+                <a href="#inicio" class="block py-2 hover:text-ataraxia-brown">Inicio</a>
+                <a href="#nosotros" class="block py-2 hover:text-ataraxia-brown">Quiénes Somos</a>
+                <a href="#productos" class="block py-2 hover:text-ataraxia-brown">Productos</a>
+                <a href="#contacto" class="block py-2 hover:text-ataraxia-brown">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg min-h-screen flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="container mx-auto px-6 z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6">Café de Especialidad</h1>
+            <p class="text-xl text-white mb-8 max-w-2xl mx-auto">Descubre la tranquilidad en cada taza</p>
+            <a href="#productos" class="bg-ataraxia-brown text-white px-8 py-3 rounded-full hover:bg-ataraxia-dark transition duration-300">Ver productos</a>
+        </div>
+    </section>
+
+    <!-- Quiénes Somos -->
+    <section id="nosotros" class="py-20 bg-ataraxia-beige">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-serif font-bold text-center text-ataraxia-brown mb-12">Nuestra Historia</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://pbs.twimg.com/media/FDOKYUGX0AUfHnF.jpg:large">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-lg mb-6">Ataraxia Café nació en 2018 de la pasión por el café de especialidad y la búsqueda de momentos de tranquilidad en la rutina diaria. Nuestro nombre proviene del concepto filosófico de "ataraxia", que representa la serenidad y ausencia de perturbación.</p>
+                    <p class="text-lg mb-6">Trabajamos directamente con pequeños productores de Colombia, Brasil y Etiopía, seleccionando los mejores granos para ofrecerte una experiencia sensorial única. Cada taza de Ataraxia Café es el resultado de un cuidadoso proceso de cultivo, selección y tostado artesanal.</p>
+                    <p class="text-lg">Nuestra misión es crear un espacio donde puedas desconectar del estrés y disfrutar del verdadero sabor del café, preparado con dedicación y conocimiento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos -->
+    <section id="productos" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-serif font-bold text-center text-ataraxia-brown mb-12">Nuestros Productos</h2>
+            
+            <!-- Cafés -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-serif font-semibold text-ataraxia-brown mb-8">Cafés de Especialidad</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Producto 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <img src="https://img.freepik.com/foto-gratis/delicioso-cafe-organico-naturaleza-muerta_23-2151762341.jpg?semt=ais_hybrid&w=740" alt="Café Colombia" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h4 class="font-serif text-xl font-bold text-ataraxia-brown mb-2">Origen Colombia</h4>
+                            <p class="text-gray-600 mb-4">Notas de chocolate negro y caramelo.</p>
+                            <span class="font-bold text-ataraxia-brown">$10.000</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Producto 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfW25KE_n4lJI693aMGU_snPGWLZ2SjmIIIw&s" alt="Café Etiopía" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h4 class="font-serif text-xl font-bold text-ataraxia-brown mb-2">Origen Etiopía</h4>
+                            <p class="text-gray-600 mb-4">Aromas florales con notas de frutos rojos y té negro.</p>
+                            <span class="font-bold text-ataraxia-brown">$14.900</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Producto 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdD7qLFg5SeDeDnxctEPljC-Hp3PxrWdVsqw&s" alt="Café Brasil" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h4 class="font-serif text-xl font-bold text-ataraxia-brown mb-2">Origen Brasil</h4>
+                            <p class="text-gray-600 mb-4">Cafe cremoso con notas de nueces y un final dulce persistente.</p>
+                            <span class="font-bold text-ataraxia-brown">$11.900</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Alimentos -->
+            <div>
+                <h3 class="text-2xl font-serif font-semibold text-ataraxia-brown mb-8">Alimentos Dulces Destacados</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Producto 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK0maHLy1aYJrg_EsAjVa3u0Fljdqa1cGWiA&s" alt="Croissant" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h4 class="font-serif text-xl font-bold text-ataraxia-brown mb-2">Croissant Artesanal</h4>
+                            <p class="text-gray-600 mb-4">Hojaldre crujiente con manteca de primera calidad.</p>
+                            <span class="font-bold text-ataraxia-brown">$4.500</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Producto 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <img src="https://www.abc.com.py/resizer/CFW3a6pjP6TGfAkLPoD3VmS02I4=/arc-anglerfish-arc2-prod-abccolor/public/MBBRODXKSFC75MIDKO3IUST6MU.jpg" alt="Torta de chocolate" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h4 class="font-serif text-xl font-bold text-ataraxia-brown mb-2">Torta de Chocolate</h4>
+                            <p class="text-gray-600 mb-4">Elaborada con chocolate belga y un toque de café.</p>
+                            <span class="font-bold text-ataraxia-brown">$6.800</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Producto 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <img src="https://www.vivo.cl/wp-content/uploads/2022/10/recetas-galletas-avena-vivo-mob.jpg" alt="Galletas" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h4 class="font-serif text-xl font-bold text-ataraxia-brown mb-2">Galletas de Avena</h4>
+                            <p class="text-gray-600 mb-4">Con chips de chocolate y un toque de canela.</p>
+                            <span class="font-bold text-ataraxia-brown">$3.900</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-20 bg-ataraxia-beige">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-serif font-bold text-center text-ataraxia-brown mb-12">Contáctanos</h2>
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-ataraxia-brown mb-1">Nombre</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-ataraxia-brown">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-ataraxia-brown mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-ataraxia-brown">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-ataraxia-brown mb-1">Mensaje</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-ataraxia-brown"></textarea>
+                        </div>
+                        <button type="submit" class="bg-ataraxia-brown text-white px-6 py-3 rounded-md hover:bg-ataraxia-dark transition duration-300">Enviar mensaje</button>
+                    </form>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="font-serif text-xl font-bold text-ataraxia-brown mb-4">Información de contacto</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-ataraxia-brown mt-1 mr-4"></i>
+                                <p>Villa Devoto, Ciudad de Buenos Aires</p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt text-ataraxia-brown mr-4"></i>
+                                <p>+56 9 11 2434 5678</p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-ataraxia-brown mr-4"></i>
+                                <p>consultas@ataraxiacafe.com</p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-clock text-ataraxia-brown mr-4"></i>
+                                <p>Lunes a Viernes: 8:00 - 20:00<br>Sábado y Domingo: 9:00 - 18:00</p>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="font-serif text-lg font-semibold text-ataraxia-brown mb-4">Síguenos</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-ataraxia-brown hover:text-ataraxia-dark"><i class="fab fa-instagram text-2xl"></i></a>
+                                <a href="#" class="text-ataraxia-brown hover:text-ataraxia-dark"><i class="fab fa-facebook text-2xl"></i></a>
+                                <a href="#" class="text-ataraxia-brown hover:text-ataraxia-dark"><i class="fab fa-twitter text-2xl"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ataraxia-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="font-serif text-2xl font-bold mb-4">Ataraxia Café</h3>
+                    <p class="max-w-md">Café de especialidad tostado artesanalmente para brindarte momentos de tranquilidad.</p>
+                </div>
+                <div class="flex flex-col space-y-2">
+                    <a href="#inicio" class="hover:text-ataraxia-beige">Inicio</a>
+                    <a href="#nosotros" class="hover:text-ataraxia-beige">Quiénes Somos</a>
+                    <a href="#productos" class="hover:text-ataraxia-beige">Productos</a>
+                    <a href="#contacto" class="hover:text-ataraxia-beige">Contacto</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2025 Ataraxia Café. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Form submission
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                
+                // Here you would typically send the data to a server
+                console.log({ name, email, message });
+                
+                // Show success message
+                alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
+                
+                // Reset form
+                contactForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
